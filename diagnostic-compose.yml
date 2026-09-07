@@ -1,0 +1,10 @@
+name: diagnostic-toolkit
+
+services:
+  diagnostic:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: diagnostic-tool:latest
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
